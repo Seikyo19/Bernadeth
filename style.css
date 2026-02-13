@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: linear-gradient(to bottom, #ffb6c1, #ffe4e9);
+  overflow-x: hidden;
+  text-align: center;
+}
+
+/* Header */
+header {
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #b30059;
+}
+
+p {
+  color: #5a0033;
+}
+
+/* Music Button */
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #ff4d88;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e6005c;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Photo Cards */
+.photo-card {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.photo-card:hover {
+  transform: scale(1.05);
+}
+
+.photo-card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.photo-card p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 40px 20px;
+  background: rgba(255,255,255,0.6);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+footer h2 {
+  color: #b30059;
+}
+
+/* Floating Hearts */
+.hearts::before,
+.hearts::after {
+  content: "💗 💕 💖 💘 💞";
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  opacity: 0.15;
+  animation: float 8s linear infinite;
+}
+
+.hearts::after {
+  top: 50%;
+  animation-duration: 12s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-200px); }
+}
